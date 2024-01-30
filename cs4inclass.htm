@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<!-- will be explained in the class next what its purpose is, it's a CSS thing-->
+	<title>Image Maps or Hotspots</title>
+
+	<style type = "text/css"> 
+    /* whatever stuff is within this, it is all CSS. This is an explicit claim so that just in case the browser doesn't know*/
+	/* Your styles go here */
+    /* This is how I write comments in CSS */
+
+    p, h1 {text-align: center;}
+    p{border:5px solid green;}
+
+    body {/*background-color: aquamarine;*/
+            background-image: url(music-1.gif);
+            background-repeat: repeat; /*repeat is used to fill the entire background by repeating the image. the default is always gonna be repeated*/
+            background-position: center; 
+            background-attachment: fixed; /*if there is no fix, the background and content will move together*/
+    }
+    img#b {float: left; border: 5px ridge red; width:40%;
+        margin-left:100px; padding: 50px;
+        position: absolute; top: 400px; left:500px;} 
+    
+    h2 {font-weight: bold; font-style:italic; color: yellow;
+        font size: 4em; position: absolute; top: 400px; left:500px;
+        z-index:1;} 
+
+        /*the higher the z index, the more it is on the top layer-- except for background image-- other elements can be put on top of one another*/
+
+        /* the space on the left, the white gap, is 100px of MARGIN-- controls space outside*/
+        /* the space between the border and the image is called PADDING. It is all around-- controls space inside */
+
+    
+    /* floating is like asking people to arrange themselves in order from the first line*/
+    /* this is saying, target the image with the ID #b to float to the right. so this will not impact the other image*/
+	</style>
+
+	
+	
+  </head>
+
+  <body>
+	<!-- Your HTML goes here --> 
+	<!--Anything here will not be displayed. Can be used to take notes or make comments-->
+		<h1> Image Hotspots or Image Maps</h1>
+
+		<map name = "middlesex" id = "M"> 
+
+			<area shape = "rect" coords="301,351,330,383" href = "http://www.wellesleyma.gov" alt = "Wellesley Site" />
+			<!-- the coordinates are found in paint-->
+
+
+		</map>
+        <p>
+		    <img src = "Middlesex-1.gif" alt="Middlesex County Map" title = "Middlesex County" usemap="#middlesex" />
+        </p>
+        <h2> Go Babson!!! </h2>
+        <img id = "b" src = "beaver-2.jpg" alt = "beaver Image" title = "Babson Beavers"/>
+        <!-- ID cannot repeat again, it has to be unique-->
+        
+  </body>
+</html>
