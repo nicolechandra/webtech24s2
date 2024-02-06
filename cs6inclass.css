@@ -1,0 +1,22 @@
+table, td {border: 2px solid black}
+table {font-family: Arial; 
+        text-align: center;
+        width: 70%; 
+        margin-right: auto; 
+        margin-left: auto;
+        background: url(music-1.gif);
+        border-collapse: collapse;}
+
+tr#r1 {font-weight: bold; background-color: yellow;}
+
+/* width 35%, 40% and 25% for the table borders*/
+
+.c1 {width: 35%;}
+.c2 {width: 40;}
+.c3 {width: 25%;}
+
+caption {font-weight: bold; 
+        font-family: lucida Handwriting; 
+        color: red; 
+        font-size: 4em;
+        margin-bottom: 2%;}
