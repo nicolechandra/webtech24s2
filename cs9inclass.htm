@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>CS9 In Class </title>
+
+	<style>
+	/* Your styles go here */
+        h1{font-family: Arial; color: navy; text-align: center;}
+        form {background-color: silver; font-family: Arial;
+             width: 50%; margin-right: auto; margin-left:auto; /* tells you that the form is a block tag*/
+                color: navy;
+                padding-top: 3%; padding-bottom:3%; padding-left: 3%} 
+
+
+
+	</style>
+	<script type="text/javascript">
+
+
+	</script>
+	
+	
+	
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+    <h1> A Simple HTML Form </h1>
+    
+	<form method="post" action=""> 
+        <!-- This is a simple text box-->
+		<p>
+			First Name: &nbsp; &nbsp;
+			<input type="text" name="firstname" size="20" maxlength="40"/> <!--placeholder="Enter First Name"/> -->
+
+            Last Name: 
+            <input type="text" name="lastname" size="20" maxlength="40"/> <!--placeholder="Enter Last Name"/> --> 
+        </br>
+    </br>
+
+            Age: &nbsp; &nbsp;
+            <input type="text" name="age" size="10" maxlength="20"/>
+
+		</p>
+        <!-- This is a drop down menu-->
+        <p>
+            Please select the state you are from: 
+            <select name="myclass">
+                <option value="Empty"> Please Select a State</option>
+                <option value="MA"> Massachusetts</option>
+                <option value="NY"> New York</option>
+                <option value="NJ"> New Jersey</option>
+                <option value="ME"> Maine</option>
+            </select>
+        </p>
+        <!-- Building a radio button-->
+        <p> 
+           Please select your gender: 
+           &nbsp; Male <input type="radio" name="mygender" value="male"/> 
+            Female &nbsp; <input type="radio" name="mygender" value="female"/> <!--the name has to be the same for the radio button to work-->
+            <!-- if it's suddenly "macolor" then suddenly you can pick two redio button, it becomes like a multiple choice-->
+        </p> 
+        <!-- This is a check box-->
+        <p>
+           Which topic in Web Tech do you like? (please select all that apply): <br/>
+            <input type="checkbox" name="mytopic" value="html"/> HTML <br/> <!-- the value is what it gives back to you, so in the system it will say "WSJ" and not Wall Street Journal-->
+            <input type="checkbox" name="mytopic" value="css"/> CSS <br/>
+            <input type="checkbox" name="mytopic" value="javasc"/> JavaScript <br/>
+            <input type="checkbox" name="mytopic" value="jqur"/> jQuery <br/>
+        </p>
+        <p>
+            Please provice any additional comments you might have: <br/>
+            <textarea name="mysuggs" cols="40" rows="5"></textarea>
+        </p>
+        <p>
+            <input type="submit" name="submit" value="Go!"/> &nbsp; &nbsp;
+            <input type="reset" name="cleardata" value="Oh No!"/>
+
+        </p>
+
+
+	</form>
+		
+	
+	
+  </body>
+</html>
