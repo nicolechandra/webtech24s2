@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+
+	    <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+        <title> Web Tech - Section 2 - HW1 </title> <!-- change this - it is worth 1 point -->
+        
+        <style>
+            h1{
+                text-align: center;
+                font-family: Arial;
+                background-color: yellow;
+            }
+
+            h3{
+                text-align: left;
+                font-family: Cambria;
+            }
+
+            div#silver {
+                background-color: silver;
+                padding-left: 150px;
+                padding-right: 150px;
+                padding-top: 25px;
+                padding-bottom: 25px;
+                margin-top: -25px;
+            }
+
+            div#white {
+                padding-right: 200px; 
+                padding-left: 200px;
+                padding-top: 50px;
+            }
+
+            img#tableimage {
+                float:right;
+                margin-left:5px;
+            }
+
+            h3{
+                background-color: white;
+                margin-right: 550px;
+            }
+
+            table {
+                border:1px solid red;
+                text-align: center;
+                font-family: Arial;
+                font-style: italic;
+                font-size: 12px;
+                width: 50%;
+                margin: auto;
+                text-align: center;
+            }
+
+            td{
+                border: 1px solid black;
+                text-align: center;
+            }
+
+            .one {background-color: blue; color: yellow;}
+            .two {background-color: darkorange; color: black;}
+            p {color: black; text-indent: 20px;}
+            
+        </style>
+        
+    </head>
+
+    <body>
+        <!-- Your HTML goes here -->
+    <div id="white">
+       <h1> Web Tech - Spring 2023 - Homework One </h1>
+
+        <div id="silver">
+            <h3>What is a Table?</h3>
+                <p>
+                <map name="tbl" id="tbl">
+                <area shape="rect" coords="6,10,54,129" href="https://en.wikipedia.org/wiki/Table_(information)"
+                    alt="Wikipedia Site" target="_blank"/>
+            </map>
+
+                <img id=tableimage src="table.jpg" alt="table" title="Image Table" usemap="#tbl" />
+                <!-- the image goes here as the first line of the paragraph -->        
+                A table is an arrangement of data in rows and columns, or possibly in a more 
+                complex structure. Tables are widely used in communication, research, and data 
+                analysis. Tables appear in print media, handwritten notes, computer software, 
+                architectural ornamentation, traffic signs, and many other places. The precise 
+                conventions and terminology for describing tables vary depending on the context. 
+                Further, tables differ significantly in variety, structure, flexibility, notation, 
+                representation and use.In books and technical articles, tables are typically presented 
+                apart from the main text in numbered and captioned floating blocks.
+            </p>
+
+        <h3>A Sample Table</h3>  
+            <!-- build your sample table here -->
+        <table>
+            <tr>
+                <td class="one">My Work in Session 6</td>
+                <td class="two"><a href="cs6inclass-1.htm">CS6 In Class</a> </td>
+            </tr>
+            <tr>
+                <td class="one">My Work in Session 7</td>
+                <td class="two"><a href="cs7inclass-1.htm">CS7 In Class</td>
+            </tr>
+            <tr>
+                <td class="one">My Work in Session 8 </td>
+                <td class="two"><a href="cs8inclass.htm">CS8 In Class</td>
+             </table>
+            </div>
+        </div>
+    </body>
+</html>
