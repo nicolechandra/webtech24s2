@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+
+<html> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>CS12 - Practicing Javascript</title>
+
+	<style type="text/css">
+	h1 {font-weight:bold; background-color: Silver;}
+	p {text-align:center;}
+  p#p1 {border:3px solid red;}
+
+	</style>
+	    
+	<script type="text/javascript"> /*put all the javascript inside this script type*/
+      function chgText()
+      {
+        var mytext;
+        mytext = document.getElementById("h11");
+        mytext.innerHTML= "Javascript is done";
+        mytext.syle.color= "navy";
+        mytext.style.fontFamily = "Lucida Handwriting";
+        mytext.style.textAlign = "center";
+      }
+
+      function chgBkCol()
+      {
+        document.getElementById("p1").style.backgroundColor="yellow";
+      }
+      function chgColBack()
+      {
+        document.getElementById("p1").style.backgroundColor="white";
+      }
+
+      function showVar()
+      {
+        var x, y; /*declaring variables*/
+        const c1= "This is a literal string"; /*constant is a construct where you assign a value that is fixed, can't be changed*/
+        alert("Get Started...");
+        x = 15;
+        y = 25; /*assigning statement, the server is 15, the receiver is x*/
+        alert(x);
+        alert(y);
+        alert(x+y); /*alert makes the variable pop up*/
+        alert("x");
+        alert("y");
+        x = "Nicole";
+        y = "is a cool girl";
+        alert(x+y);
+        x = "35";
+        y = "500";
+        alert (x+y);
+        x = 15;
+        alert(x+y);
+        alert(c1);
+        c1 = "This is a different string";
+        alert (c1);
+      }
+
+      function changeMe()
+      {
+        const c1="Don't Look - I am Changing";
+        const c2="I Have Changed!!!";
+        var myh2 = document.getElementById("h21");
+        if (myh2.innerHTML == c1 )/*asking if it is equal to my c1? double equal is used to test if it is the same between the two*/
+        {
+          myh2.innerHTML = c2; /*if it is the first one, change it to the second one: IF condition, THEN action*/
+        }
+        else
+        {
+          myh2.innerHTML = c1;
+        }
+      }
+
+
+
+</script>
+  </head>
+
+  <body>
+    <hr />
+  <!-- When you click on the button, please do the following: -->
+  <!-- 1. Change the text of the title to "Javascript is done"-->
+  <!-- 2. Center the title on the page -->
+  <!-- 3. Change the color of the font to navy -->
+  <!-- 4. Change the font family to Lucida Handwriting -->
+	<h1 id="h11"> Practice with Javascript</h1>
+    <hr />
+    <p>
+        <button onclick="chgText()">Click To Change Title</button>
+    </p>
+    <hr />
+   	<h1> More practice with Javascript </h1>
+    <!-- When you mouseover the paragraph change the background color. -->
+    <!-- Your choice of color. -->
+    <!-- When you mouseout, change the background color to white. -->
+    <p id="p1" onmouseover="chgBkCol()" onmouseout="chgColBack()"> Mouse over me to change my color </p>
+    
+    <hr/>
+    <h1> Understanding Variables in Javascript </h1>
+    <!-- We will work through this one in class -->
+    <p>
+    	<button onclick="showVar()"> Click on me to start </button>
+    </p>
+    <hr/>
+    <h1> Conditional Statement - Practice</h1>
+    <!-- When you click on the line below, change the text to -->
+    <!-- I Have Changed! When you click again, go back to the -->
+    <!-- original text.-->
+    <h2 id="h21" onclick="changeMe()">Don't Look - I am Changing</h2>
+  </body>
+</html>

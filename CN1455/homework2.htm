@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Webtech Homework 3: Nicole </title>
+
+	<style>
+	/* Your styles go here */
+	body {
+		background-color: white;
+		padding-left: 200px;
+		padding-right: 200px;
+		padding-top: 40px;
+		padding-bottom: 40px;	
+	}
+
+	form{
+		text-align: center;
+		margin: auto;
+		background-image: url(brick.gif);
+		background-repeat: repeat;
+		background-position: center;
+		background-attachment: fixed;
+		padding-top: 40px;
+		padding-bottom: 40px;
+		font-family: Arial;
+		font-size: 20px;
+	}
+
+	table, td {
+		border: 2px solid black;
+		width: 60%;
+		margin-left: auto;
+		margin-right: auto;
+		
+	}
+
+	.c1{
+		width: 35%;
+	}
+
+	.c2{
+		width: 20%;
+	}
+
+	.c3{
+		width:25%;
+	}
+
+	.c4{
+		width: 20%;
+	}
+	
+	caption {
+		font-weight: bold;
+		font-family: Lucida Grande;
+		color: navy;
+		font-size: 2em;
+		margin-bottom: 20px;
+	}
+
+	img{
+		width: 45%;
+	}
+
+	input[type=submit]{
+		height: 30px;
+		background-color: green;
+		border: none;
+		text-align: center;
+		display: inline-block;
+		cursor: pointer;
+	}
+
+	input[type=reset] {
+		height: 30px;
+		background-color: yellow;
+		border:0;
+		text-align: center;
+		display: inline-block;
+		cursor: pointer;
+	}
+	</style>
+	
+	<script>
+	/* Your JavaScript goes here */
+	  
+	</script>
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+<form action="sweaters">
+	<table>
+		<caption>Catalog of Sweaters</caption>
+			<tr id="tbl">
+				<td class="c1"> Product Image </td>
+				<td class="c2"> Product Price </td>
+				<td class="c3"> Product Selection </td>
+				<td class="c4"> Product Quantity </td>
+			</tr>
+
+		<tr id="tbl">
+			<td class="c1"> <img src="redsweater.jpg" alt="redsweater" title="a red sweater"></td>
+			<td class="c2"> $35.00 </td>
+			<td class="c3"> <input type="radio" name="mysweater" value="red sweater"/> Red Sweater </td>
+			<td class="c4"> Quantity: <br> <br>
+				<input type="text" name="redsweaterquantity" size="20" maxlength="3" style="width: 40px"> </td>
+		</tr>
+
+		<tr id="tbl">
+			<td class="c1"> <img src="bluesweater.jpg" alt="bluesweater" title="a blue sweater"></td>
+			<td class="c2"> $45.00 </td>
+			<td class="c3"> <input type="radio" name="mysweater" value="blue sweater"/> Blue Sweater </td>
+			<td class="c4"> Quantity: <br> <br>
+				<input type="text" name="bluesweaterquantity" size="20" maxlength="3" style="width: 40px"> </td>
+		</tr>
+		
+		<tr id="tbl">
+			<td class="c1"> <img src="whitesweater.jpg" alt="whitesweater" title="a white sweater"></td>
+			<td class="c2"> $30.00 </td>
+			<td class="c3"> <input type="radio" name="mysweater" value="white sweater"/> White Sweater </td>
+			<td class="c4"> Quantity: <br><br>
+				<input type="text" name="whitesweaterquantity" size="20" maxlength="3" style="width: 40px"> </td>
+		</tr>
+	</table>
+
+	<p>
+		<input type="submit" name="submit" value="Submit Selections"> &nbsp; &nbsp;
+		<input type="reset" name="clear" value="Clear Selections"/>
+	</p>
+
+</form>
+  </body>
+</html>
