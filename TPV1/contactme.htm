@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<link rel="stylesheet" type="text/css" href="indexstyle.css"/>
+</head>
+
+	<title>Contact Me</title>
+
+	<style>
+	/* Your styles go here */
+	h1{font-family: Georgia, 'Times New Roman', Times, serif; 
+	   color: black;
+	   text-align: center;}
+	   
+
+    form {background-color: white;
+		  	font-family: Cambria;
+          	width: 50%; 
+			margin-right: auto;
+			margin-left:auto; /* tells you that the form is a block tag*/
+          	color: black;
+        	padding-top: 3%;
+			padding-bottom:3%;
+			padding-left: 3%} 
+
+	p{
+		font-size: 20px;
+	}
+	</style>
+
+  <body>
+
+	<!-- Your HTML goes here -->
+
+	<div id="banner">
+        <h1 id="heading"> Nicole Chandrawidjaja's Matcha Blog </h1>
+    </div>
+
+    <!-- building out the menu below-->
+    <div class="topnav" id="mytopnav">
+        <a href="index.htm" class="active"> Home </a>
+
+        <div class="contactdrpdwn">
+            <button class="contactbutton">Contact Me</button>
+            <div class="contactcontent">
+                <a href="contactme.htm">Reach Out To Me</a>
+            </div>
+        </div>
+
+        <div class="healthbendrpdwn">
+            <button class="healthbutton">Health Benefits of Matcha</button>
+            <div class="healthbenefitscontent">
+                <a href="matchaguthealth.htm">Matcha For Gut Health</a>
+                <a href="ceremonialgrade.htm">Why Ceremonial Grade Matcha?</a>
+            </div>
+        </div>
+
+        <div class="drpdwn">
+            <button class="drpbtn"> For The Love of Matcha </button>
+            <div class="drpdwncontent">
+                <a href="shorthistory.htm"> Short History of Matcha </a>
+                <a href="creationprocess.htm"> Creation Process: How Matcha is Made </a>
+                <a href="modernmatcha.htm"> Modern Matcha: Before The Trend </a>
+                <a href="hojichavsmatcha.htm"> Hojicha VS Matcha </a>
+                <a href="teatools.htm"> Tea Tools </a>
+            </div>
+        </div>
+        <div class="worlddrpdwn">
+            <button class="worldbutton"> Matcha Reviews </button>
+            <div class="worldcontent">
+                <a href="bostonmatchareview.htm"> Boston </a>
+                <a href="japanmatchareview.htm"> Japan </a>
+                <a href="bestmatchadesserts.htm"> Best Matcha Desserts </a>
+            </div>
+        </div>
+        <div class="picdrpdwn">
+            <button class="picbutton"> Matchagraphy </button>
+            <div class="piccontent">
+                <a href="#"> Shots </a>
+                <a href="#"> Camera Lens & Specifications </a>
+            </div>
+        </div>
+
+<br>
+<br>
+	<h1> Contact Me </h1>
+    
+	<form method="post" action=""> 
+        <!-- This is a simple text box-->
+		<p>
+			First Name: 
+			&nbsp; &nbsp;
+			<input type="text" name="firstname" size="40" maxlength="40"/> <!--placeholder="Enter First Name"/> -->
+			<br>
+			<br>
+            Last Name: 
+			&nbsp; &nbsp;
+            <input type="text" name="lastname" size="40" maxlength="40"/> <!--placeholder="Enter Last Name"/> --> 
+        </br>
+    </br>
+            Email: 
+			&nbsp; &nbsp;
+            <input type="text" name="age" size="40" maxlength="20"/>
+
+		</p>
+		<p>
+            Message: <br/> <br>
+            <textarea name="mysuggs" cols="40" rows="5"></textarea>
+        </p>
+        <!-- This is a drop down menu-->
+        <p>
+            Where did you find my page? 
+            <select name="myclass">
+                <option value="Empty"> Please Select an option </option>
+                <option value="MA"> Instagram </option>
+                <option value="NY"> Google </option>
+                <option value="NJ"> Github </option>
+                <option value="ME"> Word-of-mouth</option>
+            </select>
+        </p>
+        <!-- Building a radio button-->
+        <p> 
+           Would you like me to send newsletters?
+           &nbsp; 
+		   <br>
+		   <br>
+		   	Yes <input type="radio" name="ohyes" value="yes"/> 
+            No &nbsp; <input type="radio" name="ohno" value="no"/> 
+        </p> 
+
+        <p>
+            <input type="submit" name="submit" value="Submit"/> &nbsp; &nbsp;
+            <input type="reset" name="cleardata" value="Clear"/>
+
+        </p>
+	</form>
+
+	<p> My Email: nchandrawidjaja1@babson.edu</p>
+		
+	
+	
+	
+	
+  </body>
+</html>

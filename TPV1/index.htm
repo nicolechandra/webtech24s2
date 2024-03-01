@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="indexstyle.css"/>
+    <title>Nicole Chandrawidjaja's Matcha Blog</title>
+
+    <style>
+      /*there is an external css attached look above*/
+      div#banner {
+            background: url(matchawebsitebanner.jpg);
+            padding: 5%;
+        }
+
+    audio {
+        display: none;
+    }
+
+    img#mypic{
+        width: 90%;
+    }
+    </style>
+
+</head>
+
+<body>
+    <!-- Your HTML goes here -->
+    <div id="banner">
+        <h1 id="heading"> Nicole Chandrawidjaja's Matcha Blog </h1>
+    </div>
+
+    <!-- building out the menu below-->
+    <div class="topnav" id="mytopnav">
+        <a href="index.htm" class="active"> Home </a>
+
+        <div class="contactdrpdwn">
+            <button class="contactbutton">Contact Me</button>
+            <div class="contactcontent">
+                <a href="contactme.htm">Reach Out To Me</a>
+            </div>
+        </div>
+
+        <div class="healthbendrpdwn">
+            <button class="healthbutton">Health Benefits of Matcha</button>
+            <div class="healthbenefitscontent">
+                <a href="matchaguthealth.htm">Matcha For Gut Health</a>
+                <a href="ceremonialgrade.htm">Why Ceremonial Grade Matcha?</a>
+            </div>
+        </div>
+
+        <div class="drpdwn">
+            <button class="drpbtn"> For The Love of Matcha </button>
+            <div class="drpdwncontent">
+                <a href="shorthistory.htm"> Short History of Matcha </a>
+                <a href="creationprocess.htm"> Creation Process: How Matcha is Made </a>
+                <a href="modernmatcha.htm"> Modern Matcha: Before The Trend </a>
+                <a href="hojichavsmatcha.htm"> Hojicha VS Matcha </a>
+                <a href="teatools.htm"> Tea Tools </a>
+            </div>
+        </div>
+        <div class="worlddrpdwn">
+            <button class="worldbutton"> Matcha Reviews </button>
+            <div class="worldcontent">
+                <a href="bostonmatchareview.htm"> Boston </a>
+                <a href="japanmatchareview.htm"> Japan </a>
+                <a href="bestmatchadesserts.htm"> Best Matcha Desserts </a>
+            </div>
+        </div>
+        <div class="picdrpdwn">
+            <button class="picbutton"> Matchagraphy </button>
+            <div class="piccontent">
+                <a href="shots.htm"> Shots </a>
+                <a href="camspecs.htm"> Camera Lens & Specifications </a>
+            </div>
+        </div>
+
+
+        <!-- I am going to add a Javascript link here later for resposive -->
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+
+    <!-- This is the content section below -->
+    <div class="row">
+        <div class="about" id="content1">
+            <h2>About Me </h2>
+            <p>
+                <img id="mypic" src = "nicoleprojectproposal.jpg" alt="Nicole Pic" title = "My Pic"/>
+            </p>
+            <p> I grew up in the suburbs of Semarang, Indonesia as the eldest daughter of three younger brothers.
+                Naturally, my patience is tested every single day. However, being the eldest has also equipped me with
+                the ability to come up with new things to do with my family. Whether it be trying new food or
+                activities, I always have new ideas and activities that I want to try with the people closest to me. As an ENFP
+                personality type, I enjoy talking about my passions. Some of them include filmmaking, photography,
+                traveling, and trying new food! As a result, I drifted to matcha because of its unique green color and
+                flavor that can be made into different variations. This blog will be a medium for me to express my love
+                for matcha and also just have the freedom to be a certified professional yapper.
+            </p>
+        </div>
+        <div class="about" id="content2">
+            <h2>How I Discovered Matcha </h2> <!-- this will have the two hotspots on a single image-->
+            <p>
+                <map name = "matchapic" id = "matchap"> 
+                    <area shape = "rect" coords="28,170,152,339" href = "https://www.the-matcha.tokyo/en" alt = "The Matcha Tokyo Site" />
+                    <area shape = "rect" coords="95,9,192,105" href = "https://en.wikipedia.org/wiki/Chawan" alt = "Chawan" />
+                     
+                </map>
+                <p>
+                    <img src = "matchaheaderpic.jpg" alt="Matcha Pic" title = "Matcha Pic" usemap="#matchap" />
+ 
+                </p>
+                When I was eight, I developed a really strong, unhealthy addiction to coffee. This was when the
+                Starbucks secret recipes were trendy and I wanted to try all the new frappuccinos, such as the
+                “Butterbeer Harry Potter” drink or the “Pink Cotton Candy” drink. Because of this, I noticed that I
+                would spend so much money and drink unnecessary amounts of sugar. My energy levels would crash and
+                whenever exams started to hit, I drank coffee like I was working a 9 to 5, when I really only dealt with
+                the multiplication table. While I was taking the exam, I remember trying a new espresso drink and felt
+                my heart beating uncomfortably. I felt anxious. Eventually, this led to physical drawbacks: I was
+                dehydrated and was diagnosed with low blood pressure at the age of eight. I wanted to slowly cut coffee
+                and regain my energy without having to depend on a drink.
+                <br>
+                Summer came and my family and I flew to Japan for vacation. While I explored the Fushimi Inari Shrine in
+                Kyoto, I found little market stalls that sold traditional household items. I stepped inside the store
+                and saw a group of people sitting down to watch a woman use a bamboo whisk and meticulously pour hot
+                water. I became curious and stepped inside, watching as she carefully scooped more green powder, added
+                hot water, whisked it, and served it to the people around her. She gave me a warm cup of this green
+                liquid, and I took a sip. I immediately felt peace. I enjoyed the smell of the drink and loved how it
+                made me feel grounded, yet energized. I immediately asked my mom to purchase this new tea I learned
+                known as “Matcha.”
+            </p>
+        </div>
+    </div>
+     <audio autoplay controls loop>
+        <source src="Kiki's Delivery Service - Umi No Mieru Machi Piano.mp3" type="audio/mp3"/>
+</body>
+<!-- the video is going to be on the "Matcha in Japan" page-->
+</html>
