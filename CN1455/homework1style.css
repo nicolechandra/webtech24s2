@@ -1,4 +1,11 @@
-homework1style.css
+table, td{border: 2px solid black;}
+		table {
+			font-family: Arial;
+			text-align: center;
+			width: 70%;
+			margin-left: auto;
+			margin-right: auto;
+		}
 
 body {
     background-color: gray;
