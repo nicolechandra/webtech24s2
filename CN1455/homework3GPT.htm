@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Homework 3 - processing forms</title>
+
+	<style>
+		/* Your styles go here */
+		form {
+			background-color: silver;
+			font-family: Arial;
+			color: Navy;
+			padding-left: 50px;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			margin-right: auto;
+			margin-left: auto;
+			width: 60%;
+		}
+
+		.but {
+			width: 200px;
+			height: 60px;
+			background-color: magenta;
+			color: black;
+		}
+
+		p#desc {
+			margin: 50px 200px;
+			font-family: cursive;
+		}
+
+		h3 {
+			font-family: lucida handwriting;
+			font-size: 3em;
+			text-align: center;
+		}
+
+		p#ref{
+			text-align: center;
+			margin-right: auto;
+			margin-left: auto;
+			width: 40%;
+		}
+
+		p#cgpt{
+			color: navy;
+			text-align: center;
+			margin-right: auto;
+			margin-left: auto;
+			width: 40%;
+		}
+	</style>
+
+	<script>
+		/* Your JavaScript goes here */
+
+		function showProd() {
+			// Prevent form submission
+			event.preventDefault();
+
+			// Product prices
+			const prices = {
+				"milk": 3.50,
+				"apple": 0.99,
+				"fish": 5.99
+			};
+
+			// Retrieve user inputs
+			let product = document.forms["calcProd"]["product"].value.toLowerCase();
+			let quantity = document.forms["calcProd"]["quantity"].value;
+			let amountDueField = document.forms["calcProd"]["AmtDue"];
+
+			// Validate product
+			if (!product || !(product in prices)) {
+				alert("Please enter a valid product: Milk, Apple, or Fish.");
+				return;
+			}
+
+			// Validate quantity
+			if (quantity === "" || isNaN(quantity)) {
+				alert("Please enter a numeric quantity.");
+				return;
+			}
+
+			// Calculate and display amount
+			let amount = (prices[product] * parseFloat(quantity)).toFixed(2);
+			amountDueField.value = "$" + amount;
+		}
+
+	</script>
+</head>
+
+<body>
+	<!-- Your HTML goes here -->
+	<h3> Homework 3</h3>
+	<p id="desc">
+		The form given below has 3 fields. Let us assume that the user will type in
+		the name of one of 3 products: Milk, Apple, or Fish. The user may enter these
+		using any mix of cases, so be aware. You need to check to ensure that the user
+		enters a value. If it is not one of these 3, let the user know.
+		Then the user will enter a quantity. You need to check to ensure that a quantity is entered
+		(you may assume that 0 is a valid quality) and that the value is numeric.
+		Once validated, use the following costs - 1 bottle of milk is $3.50; one
+		apple is $0.99 and one pound of fish is $5.99 - and show the amount owed
+		in the third field. All of this should be done when the appropriate
+		button is pressed. The amount must be shown with 2 decimal places and prefixed with
+		a $ (dollar) sign.
+	</p>
+	<form id="calcProd" action="" method="POST">
+		<p>
+			<input type="text" name="product" size="20" placeholder="Enter product..." />
+			&nbsp; &nbsp;&nbsp;
+			<input type="text" name="quantity" size="20" placeholder="Enter quantity.." />
+		</p>
+		<p>
+			<input type="text" name="AmtDue" size="20" placeholder="show amount due" />
+		</p>
+		<p>
+			<input onclick="showProd(); return false;" class="but" type="submit" name="submit" value="What Do I Owe" />
+			&nbsp; &nbsp;&nbsp;
+			<input class="but" type="reset" name="reset" value="Clear All" />
+		</p>
+	</form>
+
+	<p id="cgpt">
+		1. The first prompt I used was just copying and pasting the entire homework decision:
+		<br>
+		<br>
+		User
+		The form given below has 3 fields. Let us assume that the user will type in
+		the name of one of 3 products: Milk, Apple, or Fish. The user may enter these
+		using any mix of cases, so be aware. You need to check to ensure that the user
+		enters a value. If it is not one of these 3, let the user know.
+		Then the user will enter a quantity. You need to check to ensure that a quantity is entered
+		(you may assume that 0 is a valid quality) and that the value is numeric.
+		Once validated, use the following costs - 1 bottle of milk is $3.50; one
+		apple is $0.99 and one pound of fish is $5.99 - and show the amount owed
+		in the third field. All of this should be done when the appropriate
+		button is pressed. The amount must be shown with 2 decimal places and prefixed with
+		a $ (dollar) sign.
+		<br>
+		<br>
+		2. The second prompt I used so that it can be in the context of how I named the function was:
+		based on this code, answer the prompt above: *pasted the entire code from the beginning.
+	</p>
+
+	<p id="ref"> Reflection:
+		<br>
+
+		It took me quite a long time to figure out how to answer the homework, but it helped when I started writing down
+		my goals step by step. For example, my thought process was first, "why don't I just declare the variable of cost
+		to be 0 and then parsefloat quantity to muliply it with cost at the end?" Although this was the much simpler way
+		in my head, it seemed easier to do the !== if not equal to thought process. I remembered during office hours
+		when you mentioned that although it is more typing, it is much more clear and concise when you make an if-else
+		statement by thinking about the error possibilities, then creating the alerts after that.
+		<br>
+		<br>
+		However, I realized that ChatGPT did what I was thinking at first, but I realized the importance of thought
+		process for me to write my code.
+		<br>
+		<br>
+		Despite it being much shorter, it was not specific in its wording to realize that we needed more specific
+		variables. In ChatGPT, the variables were declared much later into the code and after the functions were made,
+		so it was a little confusing. I understand the importance of declaring variables in the beginning now.
+		Finally, some of these functions were new to me and I have never heard about it in class, making it more confusing. 
+		For example, the "let". Also, why did ChatGPT make it so complicated by declaring very long variables like amoundDueField? 
+		In real life, the human part of coding this should also be easily typed variables to create a smoother process.
+	</p>
+
+</body>
+
+</html>
