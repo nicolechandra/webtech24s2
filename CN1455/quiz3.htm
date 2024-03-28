@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Quiz 3 - Spring 2024</title>
+
+	<style>
+	/* Your styles go here */
+	h1 {font-family:Arial; font-size:2em; text-align:center;}
+	p { font-family:cursive;margin:0px 30px;}
+	ul,ol {font-family:cursive;}
+	table {font-family:Arial; text-align:center;margin-right:auto; margin-left:auto;width:70%;margin-top:30px;}
+	td, table {border:3px solid black;}
+	caption {font-size:1.5em; color:red; margin-bottom:5px;}
+    td.one {width:70%;}
+    td.two {width:30%; height:60px;}
+	body{padding:20px 100px;}
+	.navy {font-weight:bold; color:navy;}
+	</style>
+	
+	<script>
+    /* Your JavaScript goes here */
+
+	function showPic(x)
+	{
+		var myimg = document.getElementById("faces");
+		var caption = document.getElementById("mycaption");
+		
+		if (x == "good")
+		{
+			myimg.src = "smiley-3.jpg";
+			myimg.alt = "Smiling Face";
+			myimg.title = "Smile";
+			myimg.style.border = "10px";
+			myimg.style.border = "green"
+			myimg.style.borderStyle = "ridge";
+			document.getElementById("good").style.backgroundColor = "yellow";
+			document.getElementById("bad").style.backgroundColor = "silver";
+			document.getElementById("bad").style.backgroundColor = "silver";
+			caption.innerHTML="Web Tech Rocks"
+	
+		}
+		else if (x == "bad")
+		{
+			myimg.src = "frown-1.jpg";
+			myimg.alt = "Frowning Face";
+			myimg.title = "Frown";
+			myimg.style.border = "10px";
+			myimg.style.border = "red";
+			myimg.style.borderStyle = "dashed";
+			document.getElementById("bad").style.backgroundColor = "yellow";
+			document.getElementById("good").style.backgroundColor = "silver";
+			document.getElementById("clear").style.backgroundColor = "silver";
+			caption.innerHTML="Web Tech Sucks"
+		}
+		else if (x == "clear")
+		{
+			myimg.src = "";
+			myimg.alt = "Image Goes Here";
+			myimg.title = "";
+			myimg.style.border = "";
+			myimg.style.borderStyle = "";
+			document.getElementById("sucks").style.backgroundColor = "silver"
+			document.getElementById("rock").style.backgroundColor = "silver"
+			document.getElementById("clear").style.backgroundColor = "silver"
+			caption.innerHTML="Change This Caption"
+			
+		}
+
+
+	}
+	
+		
+	</script>
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+	<h1>Quiz 3 (25 points)</h1>
+	<p>The table below has three buttons in the right column and ONE image in the left. The image is left blank
+		and you can only see the ALT text. Please use javascript to implement the following functionality: <br/><br/>
+		<ol>
+            <li> When the Web-Tech Rocks button is clicked:
+                <ul>
+                    <li>Show smiley face image</li>
+                    <li>Image must have a green border, 10px thick, ridge style</li>
+                    <li>The Web-Tech Rocks button should be yellow (not the words but the button itself)</li>
+                    <li>The other two buttons must be silver </li>
+                    <li>The caption must say "Web Tech Rocks"</li>
+                </ul>
+            </li>
+            <li> When the Web-Tech Sucks button is clicked:
+                <ul>
+                    <li>Show frowny face image</li>
+                    <li>Image must have a red border, 10px thick, dashed style</li>
+                    <li>The Web-Tech Sucks button should be yellow (not the words but the button itself)</li>
+                    <li>The other two buttons must be silver </li>
+                    <li>The caption must say "Web Tech Sucks"</li>
+                </ul>
+            </li>
+            <li> When the Clear It All button is clicked:
+                <ul>
+                    <li>No image is seen. The alt text is "Image Goes Here"</li>
+                    <li>No borders should be seen</li>
+                    <li>All buttons should be silver(not the words but the button itself)</li>
+                    <li>The caption must say "Change This Caption"</li>
+                </ul>
+            </li>
+            <li>For full credit write it as a single function. For 5 points less, use
+                as many functions as needed.
+            </li>
+        </ol>
+	</p>
+	<table>
+		<caption id="mycaption">Change this caption</caption>
+		<tr>
+			<td class="one" rowspan="3">
+				<img id="faces" src="" alt="Image Goes Here" title=""/>
+			</td>
+			<td class="two">
+				<button id="good" onclick="showPic(this.id)">Web Tech Rocks</button>
+			</td>
+		</tr>
+		<tr>
+			<td class="two">
+				<button id="bad" onclick="showPic(this.id)">Web Tech Sucks</button>
+			</td>
+		</tr>
+		<tr>
+			<td class="two">
+				<button id="clear" onclick="showPic(this.id)">Clear It All</button>
+			</td>
+		</tr>
+	</table>
+	
+  </body>
+</html>
