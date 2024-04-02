@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>CS19 In Class
+
+    </title>
+	<style>
+        p, h3 {text-align:center;}
+        img {width:30%; border-width: 20px; border-style: ridge; padding: 20px;}
+        button {width:150px; height:40px; 
+                background-color:green;; font-family:arial; 
+                color:yellow;}
+        div#b{text-align:center;}
+	</style>
+    
+    
+    
+    <script type="text/javascript">
+
+        var mypics = new Array("tiger5.jpg", "tiger6.jpg", "tiger7.jpg", "tiger8.jpg");
+        var mytext = new Array("This is Webtech", "This is fun", "Teaches me everything", "Under the sun");
+        var mycols = new Array("blue", "green", "red", "pink", "magenta", "orange");
+        var c, d;
+        c = 0; /*This counter serves both pictures and captions*/
+        d = 0; /*This counter is for my colors*/
+        e = 0; /*This counter serves captions*/
+
+        function showSlides()
+        {
+            const myimg = document.getElementById("daimg");
+            const mycap = document.getElementById("h");            
+            myimg.src = mypics[c];
+            mycap.innerHTML = mytext[e];
+            myimg.style.borderColor = mycols[d];
+            c = c + 1; /*same like ++c this is the pro way*/
+
+            if (c > mypics.length -1)
+            {
+                c = 0;
+            }
+
+            ++d;
+            if(d > mycols.length - 1)
+            {
+                d = 0;
+            }
+            ++e;
+            if (e>mytext.length-1)
+            {
+                e=0
+            }
+            setTimeout("showSlides()", 1000);
+
+        }
+        
+    </script>
+</head>
+<body onload="showSlides()">
+    <p>
+    
+    <img id="daimg" src="tiger5.jpg" alt="Slide Show of Tigers" title="Tigers"/>
+    
+    </p>
+    <h3 id="h"></h3>
+    <!-- The above h3 will be used for showing a caption, if needed.-->
+     
+</body>
+</html>
