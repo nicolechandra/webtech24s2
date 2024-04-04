@@ -48,7 +48,7 @@
             dollar = document.getElementById("dollar");
             yuan = document.getElementById("yuan");
 
-            if ((dollar.value === "" && yuan.value === "") || (dollar.value !== "" && yuan.value !== "")) {
+            if ((dollar.value == "" && yuan.value == "") || (dollar.value !== "" && yuan.value !== "")) {
                 alert("Please enter only one value, either Yuan or Dollars to convert currency.");
             }
             else if (yuan.value !== "") 
