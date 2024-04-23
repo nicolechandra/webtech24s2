@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Quiz 6 - Spring 2024</title>
+
+	<style>
+		/* Your styles go here */
+
+		h1 {
+			font-family: Arial;
+			font-size: large;
+			text-align: center;
+			color: Navy;
+		}
+
+		div {
+			height: 75px;
+			width: 75px;
+			background-color: red;
+			position: absolute;
+			top: 100px;
+			left: 0px;
+		}
+
+		p#inst {
+			font-family: Arial;
+			font-size: large;
+			color: navy;
+			font-weight: bold;
+		}
+	</style>
+
+
+	<script type="text/javascript">
+
+		var pos = 100;
+		var horPos = 0;
+		var ogpos = 0;
+		var heightOne = 400;
+		var heightTwo = 200;
+		var dirBox, moving;
+
+		moving = 0;
+
+		function moveBox() {
+			const box = document.getElementById("box");
+
+			pos -= 5;
+			box.style.top = pos + "px";
+
+
+			if (pos <= heightOne && pos > heightTwo && moving == 0) {
+				horPos = 300;
+				moveFlag = 1;
+			}
+
+			if (pos <= heightTwo && moving == 1) {
+				horPos = ogpos;
+				moveFlag = 2;
+			}
+			box.style.left = horPos + "px";
+
+			if (pos <= 20) {
+				pos = 1000;
+				horPos = ogpos;
+				moveFlag = 0;
+			}
+
+			dirBox = setTimeout("moveBox()", 10);
+		}
+
+	</script>
+
+
+</head>
+
+<body onload="moveBox()">
+	<!-- Your HTML goes here -->
+	<h1> Quiz 6 - 25 points - Spring 2024 </h1>
+
+	<p id="inst">
+		Instructions to be given in class. Easier to see it
+		instead of reading verbose text.
+	</p>
+
+	<div id="box">
+
+		Animate Me!!
+	</div>
+
+	
+
+
+</body>
+
+</html>
