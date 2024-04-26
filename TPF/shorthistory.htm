@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Matcha Review">
+    <meta name="author" content="Nicole Chandrawidjaja">
+    <link rel="stylesheet" type="text/css" href="indexstyle.css" />
+    <title> Matcha - A Short History</title>
+
+    <style>
+        /* Your styles go here */
+        body {
+            font-family: Cambria, Georgia, 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: black;
+        }
+        /*content section styling */
+        .content {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .content h3 {
+            color: #000000; 
+        }
+        .content p {
+            color: #333;
+        }
+        .content img {
+            max-width: 450px; 
+            transition: transform 0.3s ease;
+            border-radius: 5%;
+        }
+        /* Hover effect to scale the image */
+        .content img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Your HTML goes here -->
+
+    <div id="banner">
+        <h1 id="heading"> Nicole Chandrawidjaja's Matcha Blog </h1>
+    </div>
+
+    <!-- building out the menu below-->
+    <div class="topnav" id="mytopnav">
+        <a href="index.htm" class="active"> Home </a>
+        <a href="contactme.htm">Contact Me</a>
+        <div class="healthbendrpdwn">
+            <button class="healthbutton">Health Benefits of Matcha</button>
+            <div class="healthbenefitscontent">
+                <a href="matchaguthealth.htm">Matcha For Gut Health</a>
+                <a href="ceremonialgrade.htm">Why Ceremonial Grade Matcha?</a>
+            </div>
+        </div>
+        <div class="drpdwn">
+            <button class="drpbtn"> For The Love of Matcha </button>
+            <div class="drpdwncontent">
+                <a href="shorthistory.htm"> Short History of Matcha </a>
+                <a href="creationprocess.htm"> Creation Process: How Matcha is Made </a>
+                <a href="modernmatcha.htm"> Modern Matcha: Before The Trend </a>
+                <a href="teatools.htm"> Tea Tools </a>
+            </div>
+        </div>
+        <div class="worlddrpdwn">
+            <button class="worldbutton"> Matcha Reviews </button>
+            <div class="worldcontent">
+                <a href="bostonmatchareview.htm"> Boston </a>
+                <a href="japanmatchareview.htm"> Japan </a>
+                <a href="bestmatchadesserts.htm"> Best Matcha Desserts </a>
+            </div>
+        </div>
+        <a href="sitemap.htm"> Sitemap </a>
+        <a href="credits.htm"> Credits </a>
+         <!-- I am going to add a Javascript link here later for resposive -->
+    <a href="javascript:void(0);" class="icon" onclick="toggleResponsiveNav()">&#9776;</a>
+    </div>
+    <!-- content starts here-->
+    <div class="content">
+        <!-- Your HTML content goes here -->
+        <h3> Short History of Matcha </h3>
+        <img src="matchahistory.JPG" alt="Matcha" style="float: left; margin-right: 15px;">
+        <p> The common perception that matcha originates from Japan is a misconception. In reality, the origins of matcha can be traced back to China in the 12th century. It was introduced to Japan by the Japanese Buddhist monk Myoan Eisai, who discovered its beneficial effects on meditation, noting that it fostered a sense of calm alertness. This discovery was made during his studies in China, and upon realizing the potential of matcha, Eisai brought the tea seeds to Japan. He planted these seeds on temple grounds upon his return, specifically at the residence of the Kamakura Shogunate, marking the beginning of matcha's cultivation in Japan. Eisai's innovative techniques, such as growing tea leaves in shaded conditions, were pivotal in enhancing the health benefits associated with matcha.
+        The word "matcha" is deeply rooted in the Japanese language, deriving from "matsu" (to rub or to paint) and "cha" (tea). This reflects the unique and meticulous preparation process of matcha, which involves grinding tea leaves into a fine powder.
+        Historically, the Tang Dynasty (7th to 10th century) pioneered the practice of steaming tea leaves and then forming them into bricks for easier transport and storage. This method involved roasting and then crushing the leaves into a powder, which was later mixed with water and salt. Eisai's introduction of tea seeds to Japan and his cultivation methods signified a pivotal moment in the history of tea, particularly in the evolution and popularization of matcha, emphasizing its cultural and health significance that persists to this day.
+        </p>
+    </div>
+    <script>
+        var images = document.querySelectorAll("img");
+
+        images.forEach(function(image) {
+        // Event listener for mouseenter
+        image.addEventListener("mouseenter", function() {
+            image.style.backgroundColor = "#a0b682";
+            image.style.padding = "5px";
+            image.style.margin = "5px";
+            image.style.boxShadow = "0px 0px 10px 5px #a0b682";
+            image.style.transform = "scale(1.05)";
+        });
+
+        // Event listener for mouseleave
+        image.addEventListener("mouseleave", function() {
+            image.style.backgroundColor = "";
+            image.style.padding = "";
+            image.style.margin = "";
+            image.style.boxShadow = "none";
+            image.style.transform = "scale(1)";
+        });
+        });
+    </script>
+    <script>
+        // Function to toggle responsive navigation
+        function toggleResponsiveNav() {
+            var nav = document.getElementById("mytopnav");
+            if (nav.className === "topnav") {
+                nav.className += " responsive";
+            } else {
+                nav.className = "topnav";
+            }
+        }
+
+        </script>
+</body>
+</html>

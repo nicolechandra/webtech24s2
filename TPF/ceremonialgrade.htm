@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Matcha Review">
+    <meta name="author" content="Nicole Chandrawidjaja">
+    <link rel="stylesheet" type="text/css" href="indexstyle.css" />
+    <title>Change this title</title>
+    <style>
+        /* Your styles go here */
+        body {
+            font-family: Cambria, Georgia, 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: black;
+        }
+        
+        /* Improve content section styling */
+        .content {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .content h3 {
+            color: #050505; /* Green color */
+        }
+        .content p {
+            color: #333;
+        }
+
+        /* New styles for image positioning */
+        .benefits-section {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin-bottom: -250px;
+        }
+
+        .text {
+            flex: 1;
+        }
+
+        .image {
+            flex: 1;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .image img {
+            max-width: 100%;
+            height: 60%;
+            float: right;
+            margin-left: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .image img:hover {
+    transform: scale(1.1);
+}
+    </style>
+</head>
+<body>
+
+    <!-- Your HTML goes here -->
+
+    <div id="banner">
+        <h1 id="heading"> Nicole Chandrawidjaja's Matcha Blog </h1>
+    </div>
+
+    <!-- building out the menu below-->
+    <div class="topnav" id="mytopnav">
+        <a href="index.htm" class="active"> Home </a>
+        <a href="contactme.htm">Contact Me</a>
+        <div class="healthbendrpdwn">
+            <button class="healthbutton">Health Benefits of Matcha</button>
+            <div class="healthbenefitscontent">
+                <a href="matchaguthealth.htm">Matcha For Gut Health</a>
+                <a href="ceremonialgrade.htm">Why Ceremonial Grade Matcha?</a>
+            </div>
+        </div>
+        <div class="drpdwn">
+            <button class="drpbtn"> For The Love of Matcha </button>
+            <div class="drpdwncontent">
+                <a href="shorthistory.htm"> Short History of Matcha </a>
+                <a href="creationprocess.htm"> Creation Process: How Matcha is Made </a>
+                <a href="modernmatcha.htm"> Modern Matcha: Before The Trend </a>
+                <a href="teatools.htm"> Tea Tools </a>
+            </div>
+        </div>
+        <div class="worlddrpdwn">
+            <button class="worldbutton"> Matcha Reviews </button>
+            <div class="worldcontent">
+                <a href="bostonmatchareview.htm"> Boston </a>
+                <a href="japanmatchareview.htm"> Japan </a>
+                <a href="bestmatchadesserts.htm"> Best Matcha Desserts </a>
+            </div>
+        </div>
+        <a href="sitemap.htm"> Sitemap </a>
+        <a href="credits.htm"> Credits </a>
+         <!-- I am going to add a Javascript link here later for resposive -->
+    <a href="javascript:void(0);" class="icon" onclick="toggleResponsiveNav()">&#9776;</a>
+    </div>
+    <!-- content starts here-->
+    <div class="content">
+        <!-- Your HTML content goes here -->
+        <h3> Flavor and Authenticity </h3>
+        <p>
+            Compared to lower grades, ceremonial grade matcha has a finer texture and a more delicate flavor profile.
+            When whisked properly, it has a smooth, creamy texture, a subtle sweetness, and a vibrant green color.
+            Because of this, it is perfect for matcha ceremonies, where the tea is sipped alone, without any additional
+            ingredients.
+        </p>
+        <!-- New section with text and image side by side -->
+        <div class="benefits-section">
+            <div class="text">
+                <h4>Health Benefits: Why Ceremonial Grade Matcha?</h4>
+                <p>
+                    Ceremonial grade matcha is high in antioxidants, especially catechins, which are thought
+                    to have anti-cancer properties. Additionally, it has L-theanine, an amino acid that helps reduce stress and
+                    induce relaxation without making you feel sleepy. Because ceremonial grade matcha is of a higher caliber,
+                    you're getting a more concentrated form of these nutrients.
+                </p>
+            </div>
+            <div class="image">
+                <img src="cgmatcha.PNG" alt="Ceremonial Grade Matcha" />
+            </div>
+        </div>
+        <!-- Continuing with other sections -->
+        <h3> Cultural and Ritual Significance</h3>
+        <p>
+            Matcha preparation and consumption are rituals used in Japanese tea ceremonies that are intended to foster
+            mindfulness, harmony, and respect. In addition to respecting this custom, using ceremonial grade matcha
+            guarantees that the encounter is as genuine and significant as feasible.
+        </p>
+        <h3> Purity and Origin</h3>
+        <p>
+            Matcha of ceremonial quality is frequently obtained from particular areas, like Uji in Kyoto, Japan, that
+            are renowned for producing superior tea leaves. The distinctive flavor and color of tea are derived from the
+            meticulous care and shading of the tea bushes for several weeks prior to harvest, which increases the levels
+            of chlorophyll and amino acids. Additionally, this grade guarantees the product's purity by containing only
+            the best-ground tea leaves and no fillers or additives.
+        </p>
+        <h3> Experience & Enjoyment</h3>
+        <p>
+            The experience of drinking ceremonial grade matcha is unparalleled for enthusiasts and connoisseurs. From
+            sifting the matcha powder to whisking it with water, the preparation process is a mindful exercise that
+            enhances the experience in general. Ceremonial grade matcha is a luxurious treat for people who value finer
+            things in life because of its exceptional flavor and fragrance.
+        </p>
+    </div>
+    <script>
+         /*I learned this from w3schools: this is the link - https://www.w3schools.com/jsref/met_document_queryselector.asp#:~:text=The%20querySelector()%20method%20returns,selector(s)%20is%20invalid.*/
+        var images = document.querySelectorAll("img");
+
+        images.forEach(function(image) {
+        // Event listener for mouseenter
+        image.addEventListener("mouseenter", function() {
+            image.style.backgroundColor = "#a0b682";
+            image.style.padding = "5px";
+            image.style.margin = "5px";
+            image.style.boxShadow = "0px 0px 10px 5px #a0b682";
+            image.style.transform = "scale(1.05)";
+        });
+
+        // Event listener for mouseleave
+        image.addEventListener("mouseleave", function() {
+            image.style.backgroundColor = "";
+            image.style.padding = "";
+            image.style.margin = "";
+            image.style.boxShadow = "none";
+            image.style.transform = "scale(1)";
+        });
+        });
+    </script>
+    <script>
+        // Function to toggle responsive navigation
+        function toggleResponsiveNav() {
+            var nav = document.getElementById("mytopnav");
+            if (nav.className === "topnav") {
+                nav.className += " responsive";
+            } else {
+                nav.className = "topnav";
+            }
+        }
+    </script>
+</body>
+</html>

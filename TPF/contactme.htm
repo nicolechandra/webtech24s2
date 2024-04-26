@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Matcha Review">
+    <meta name="author" content="Nicole Chandrawidjaja">
+    <title>Reach Out to Me - Nicole's Matcha Blog</title>
+    <link rel="stylesheet" href="indexstyle.css">
+    <style>
+        /* Your additional styles go here */
+        /* Ensure consistency in styling */
+        body {
+            font-family: Cambria, Georgia, 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: black;
+        }
+        /* Improve banner styling */
+        #banner {
+            background-color: #5cb85c; /* Green color */
+            padding: 20px 0;
+            text-align: center;
+        }
+        #heading {
+            margin: 0;
+            color: white;
+        }
+        /* Improve form styling */
+        form {
+            background-color: white;
+            font-family: Cambria;
+            width: 50%;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        form p {
+            margin-bottom: 10px;
+        }
+        form input[type="text"],
+        form textarea {
+            width: calc(100% - 10px);
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 5px;
+        }
+        form select {
+            width: calc(100% - 10px);
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 5px;
+        }
+        form input[type="radio"] {
+            margin-right: 5px;
+        }
+        form input[type="submit"],
+        form input[type="reset"] {
+            background-color: #5cb85c; /* Green color */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        form input[type="submit"]:hover,
+        form input[type="reset"]:hover {
+            background-color: #4cae4c; /* Darker green color */
+        }
+        #email {
+            text-align: center;
+            font-size: 15px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="banner">
+    <h1 id="heading">Nicole Chandrawidjaja's Matcha Blog</h1>
+</div>
+
+ <!-- building out the menu below-->
+ <div class="topnav" id="mytopnav">
+    <a href="index.htm" class="active"> Home </a>
+
+    <div class="contactdrpdwn">
+        <button class="contactbutton">Contact Me</button>
+        <div class="contactcontent">
+            <a href="contactme.htm">Reach Out To Me</a>
+        </div>
+    </div>
+
+    <div class="healthbendrpdwn">
+        <button class="healthbutton">Health Benefits of Matcha</button>
+        <div class="healthbenefitscontent">
+            <a href="matchaguthealth.htm">Matcha For Gut Health</a>
+            <a href="ceremonialgrade.htm">Why Ceremonial Grade Matcha?</a>
+        </div>
+    </div>
+
+    <div class="drpdwn">
+        <button class="drpbtn"> For The Love of Matcha </button>
+        <div class="drpdwncontent">
+            <a href="shorthistory.htm"> Short History of Matcha </a>
+            <a href="creationprocess.htm"> Creation Process: How Matcha is Made </a>
+            <a href="modernmatcha.htm"> Modern Matcha: Before The Trend </a>
+            <a href="teatools.htm"> Tea Tools </a>
+        </div>
+    </div>
+    <div class="worlddrpdwn">
+        <button class="worldbutton"> Matcha Reviews </button>
+        <div class="worldcontent">
+            <a href="bostonmatchareview.htm"> Boston </a>
+            <a href="japanmatchareview.htm"> Japan </a>
+            <a href="bestmatchadesserts.htm"> Best Matcha Desserts </a>
+        </div>
+    </div>
+    <a href="sitemap.htm"> Sitemap </a>
+    <a href="credits.htm"> Credits </a>
+     <!-- I am going to add a Javascript link here later for resposive -->
+     <a href="javascript:void(0);" class="icon" onclick="toggleResponsiveNav()">&#9776;</a>
+    </div>
+
+<br>
+<br>
+
+<!-- Form section -->
+<form method="post" action="" onsubmit="return validateForm()">
+    <h1>Contact Me</h1>
+    <p>
+        First Name:
+        <input type="text" id="firstname" name="firstname" maxlength="40" required>
+    </p>
+    <p>
+        Last Name:
+        <input type="text" id="lastname" name="lastname" maxlength="40" required>
+    </p>
+    <p>
+        Email:
+        <input type="email" id="email" name="email" maxlength="20" required>
+    </p>
+    <p>
+        Message:<br>
+        <textarea id="message" name="message" rows="5" required></textarea>
+    </p>
+    <p>
+        Where did you find my page?
+        <select id="source" name="source" required>
+            <option value="">Please Select an option</option>
+            <option value="MA">Instagram</option>
+            <option value="NY">Google</option>
+            <option value="NJ">Github</option>
+            <option value="ME">Word-of-mouth</option>
+        </select>
+    </p>
+    <p>
+        Would you like me to send newsletters?
+        Yes <input type="radio" id="newsletter_yes" name="newsletter" value="yes">
+        No <input type="radio" id="newsletter_no" name="newsletter" value="no">
+    </p>
+    <p>
+        <input type="submit" name="submit" value="Submit">
+        <input type="reset" name="cleardata" value="Clear">
+    </p>
+</form>
+
+<!-- JavaScript validation script -->
+<script>
+    // Function to validate the form
+    function validateForm() {
+        var firstname = document.getElementById("firstname").value.trim();
+        var lastname = document.getElementById("lastname").value.trim();
+        var email = document.getElementById("email").value.trim();
+        var message = document.getElementById("message").value.trim();
+        var source = document.getElementById("source").value;
+        var newsletterYes = document.getElementById("newsletter_yes").checked;
+        var newsletterNo = document.getElementById("newsletter_no").checked;
+
+
+    /*help of w3schools for faster if else hacks. I am learning your "stealing smart" method from class hahaha, thanks professor :DD - https://www.w3schools.com/jsref/jsref_regexp_charset_not.asp*/
+        if (!firstname || !lastname || !/^[A-Za-z]+$/.test(firstname) || !/^[A-Za-z]+$/.test(lastname)) {
+            alert("Please enter a valid first and last name.");
+            return false;
+        }
+
+        if (!/\S+@\S+\.\S+/.test(email)) {
+            alert("Please enter a valid email address.");
+            return false;
+        }
+
+        if (!message || message.length > 200) {
+            alert("Please enter a message (max 200 characters).");
+            return false;
+        }
+
+        if (source === '') {
+            alert("Please select where you found the page.");
+            return false;
+        }
+
+        if (!newsletterYes && !newsletterNo) {
+            alert("Please select whether you want to receive newsletters.");
+            return false;
+        }
+
+        return true;
+    }
+</script>
+<script>
+    // Function to toggle responsive navigation
+    function toggleResponsiveNav() {
+        var nav = document.getElementById("mytopnav");
+        if (nav.className === "topnav") {
+            nav.className += " responsive";
+        } else {
+            nav.className = "topnav";
+        }
+    }
+
+    </script>
+</body>
+</html>

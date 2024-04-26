@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Matcha Review">
+    <meta name="author" content="Nicole Chandrawidjaja">
+    <link rel="stylesheet" type="text/css" href="indexstyle.css" />
+</head>
+
+<title>Sitemap</title>
+
+<style>
+   body {
+            font-family: Cambria, Georgia, 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: black;
+        }
+        /* Improve banner styling */
+        #banner {
+            background-color: #5cb85c; /* Green color */
+            padding: 20px 0;
+            text-align: center;
+        }
+        #heading {
+            margin: 0;
+            color: white;
+        }
+        /* Improve sitemap section */
+        .sitemapsect {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .sitemaplist {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sitemaplist li {
+            margin-bottom: 10px;
+        }
+        .sitemaplist li ul {
+            margin-top: 5px;
+            margin-left: 20px;
+        }
+        .sitemaplist a {
+            text-decoration: none;
+            color: #333;
+        }
+        .sitemaplist a:hover {
+            color: #5cb85c; /* Green color */
+        }
+</style>
+
+<body>
+
+    <!-- Your HTML goes here -->
+
+    <div id="banner">
+        <h1 id="heading"> Nicole Chandrawidjaja's Matcha Blog </h1>
+    </div>
+
+    <!-- building out the menu below-->
+    <div class="topnav" id="mytopnav">
+        <a href="index.htm" class="active"> Home </a>
+        
+
+        <div class="contactdrpdwn">
+            <button class="contactbutton">Contact Me</button>
+            <div class="contactcontent">
+                <a href="contactme.htm">Reach Out To Me</a>
+            </div>
+        </div>
+
+        <div class="healthbendrpdwn">
+            <button class="healthbutton">Health Benefits of Matcha</button>
+            <div class="healthbenefitscontent">
+                <a href="matchaguthealth.htm">Matcha For Gut Health</a>
+                <a href="ceremonialgrade.htm">Why Ceremonial Grade Matcha?</a>
+            </div>
+        </div>
+
+        <div class="drpdwn">
+            <button class="drpbtn"> For The Love of Matcha </button>
+            <div class="drpdwncontent">
+                <a href="shorthistory.htm"> Short History of Matcha </a>
+                <a href="creationprocess.htm"> Creation Process: How Matcha is Made </a>
+                <a href="modernmatcha.htm"> Modern Matcha: Before The Trend </a>
+                <a href="hojichavsmatcha.htm"> Hojicha VS Matcha </a>
+                <a href="teatools.htm"> Tea Tools </a>
+            </div>
+        </div>
+        <div class="worlddrpdwn">
+            <button class="worldbutton"> Matcha Reviews </button>
+            <div class="worldcontent">
+                <a href="bostonmatchareview.htm"> Boston </a>
+                <a href="japanmatchareview.htm"> Japan </a>
+                <a href="bestmatchadesserts.htm"> Best Matcha Desserts </a>
+            </div>
+        </div>
+            <a href="sitemap.htm"> Sitemap </a>
+            <a href="credits.htm"> Credits </a>
+             <!-- I am going to add a Javascript link here later for resposive -->
+    <a href="javascript:void(0);" class="icon" onclick="toggleResponsiveNav()">&#9776;</a>
+        </div>
+        <!-- start of site map content-->
+        <div class = "sitemapsect">
+        <h1>Sitemap</h1>
+        <ul class="sitemaplist">
+            <li><a href="index.htm">Home</a></li>
+            <li>
+                Contact Me
+                <ul>
+                    <li><a href="contactme.htm">Reach Out To Me</a></li>
+                </ul>
+            </li>
+            <li>
+                For The Love of Matcha
+                <ul>
+                    <li><a href="shorthistory.htm">Short History of Matcha</a></li>
+                    <li><a href="creationprocess.htm">Creation Process: How Matcha is Made</a></li>
+                    <li><a href="modernmatcha.htm">Modern Matcha: Before The Trend</a></li>
+                    <li><a href="teatools.htm">Tea Tools</a></li>
+                </ul>
+            </li>
+            <li>
+                Matcha Reviews
+                <ul>
+                    <li><a href="bostonmatchareview.htm">Boston</a></li>
+                    <li><a href="japanmatchareview.htm">Japan</a></li>
+                    <li><a href="bestmatchadesserts.htm">Best Matcha Desserts</a></li>
+                </ul>
+            </li>
+            <li><a href="sitemap.htm">Sitemap</a></li>
+            <li><a href="credits.htm">Credits</a></li>
+        </ul>
+    </div>
+    <script>
+        // Function to toggle responsive navigation
+        function toggleResponsiveNav() {
+            var nav = document.getElementById("mytopnav");
+            if (nav.className === "topnav") {
+                nav.className += " responsive";
+            } else {
+                nav.className = "topnav";
+            }
+        }
+
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Flying A Plane</title>
+
+	<style>
+	/* Your styles go here */
+
+	img#p {position: absolute; top: 20 px;} /*puts behind the image, button is hidden*/
+	button { position: absolute; top: 100 px}
+	
+	</style>
+	
+	<script type="text/javascript">
+		var pos = 28;
+		var planecontrol, flyflag;
+
+		flyflag = 0;
+
+		function flyplane()
+		{
+			const myplane = document.getElementById("p");
+			myplane.style.left = pos + "px";
+
+			pos = pos + 5;
+
+			if (pos > 1000)
+			{
+				pos = 20;
+			}
+
+			planecontrol = setTimeout("flyplane()", 25);
+			flyflag = 1;
+		}
+
+		function startstop()
+		{
+			if (flyflag == 1)
+			{
+				clearTimeout(planecontrol);
+				flyflag = 0;
+			}
+			else 
+			{
+				planecontrol = setTimeout("flyplane()", 25)
+			}
+		}
+
+		/*flyflag and planecontrols are both global variables which means they can be accessed across all variables at the same time*/
+
+	</script>
+	
+	
+  </head>
+
+  <body>
+	<!-- Your HTML goes here --> 
+	<!--Anything here will not be displayed. Can be used to take notes or make comments-->
+
+		<img id="p" src="flying.jpg" alt="Flying Plane" title="Fly the plane">
+
+		<button onclick="startstop()">Click to Start</button>
+		
+		
+	
+	
+  </body>
+</html>

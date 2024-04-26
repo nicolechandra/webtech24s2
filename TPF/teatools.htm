@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Matcha Review">
+    <meta name="author" content="Nicole Chandrawidjaja">
+    <link rel="stylesheet" type="text/css" href="indexstyle.css" />
+    <title>Matcha - Tea Tools</title>
+
+    <style>
+        /* Your styles go here */
+        body {
+            font-family: Cambria, Georgia, 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: black;
+        }
+
+        .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+        padding: 20px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+        .content h3 {
+            color: #000000; /* Green color */
+        }
+
+        .content p {
+            color: #333;
+            text-align: center;
+        }
+
+        .content img {
+            max-width: 30%;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .content img:hover {
+            transform: scale(1.1);
+        }
+
+        .tea-tools-description {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Your HTML goes here -->
+    <div id="banner">
+        <h1 id="heading"> Nicole Chandrawidjaja's Matcha Blog </h1>
+    </div>
+
+    <!-- building out the menu below-->
+    <div class="topnav" id="mytopnav">
+        <a href="index.htm" class="active"> Home </a>
+        <div class="contactdrpdwn">
+            <button class="contactbutton">Contact Me</button>
+            <div class="contactcontent">
+                <a href="contactme.htm">Reach Out To Me</a>
+            </div>
+        </div>
+        <div class="healthbendrpdwn">
+            <button class="healthbutton">Health Benefits of Matcha</button>
+            <div class="healthbenefitscontent">
+                <a href="matchaguthealth.htm">Matcha For Gut Health</a>
+                <a href="ceremonialgrade.htm">Why Ceremonial Grade Matcha?</a>
+            </div>
+        </div>
+        <div class="drpdwn">
+            <button class="drpbtn"> For The Love of Matcha </button>
+            <div class="drpdwncontent">
+                <a href="shorthistory.htm"> Short History of Matcha </a>
+                <a href="creationprocess.htm"> Creation Process: How Matcha is Made </a>
+                <a href="modernmatcha.htm"> Modern Matcha: Before The Trend </a>
+                <a href="teatools.htm"> Tea Tools </a>
+            </div>
+        </div>
+        <div class="worlddrpdwn">
+            <button class="worldbutton"> Matcha Reviews </button>
+            <div class="worldcontent">
+                <a href="bostonmatchareview.htm"> Boston </a>
+                <a href="japanmatchareview.htm"> Japan </a>
+                <a href="bestmatchadesserts.htm"> Best Matcha Desserts </a>
+            </div>
+        </div>
+        <a href="sitemap.htm"> Sitemap </a>
+        <a href="credits.htm"> Credits </a>
+        <a href="javascript:void(0);" class="icon" onclick="toggleResponsiveNav()">&#9776;</a>
+    </div>
+
+    <!-- start of content here-->
+    <div class="content">
+        <br>
+        <br>
+
+        <h3>Tea Tools</h3>
+
+        <!-- Image 1 -->
+        <img src="teatools1.jpg" alt="Tea Tools" class="tea-tools-img">
+        <!-- Description for Image 1 -->
+        <p class="tea-tools-description">
+            These are the tea tools I use when making matcha. I just broke my chawan recently so it's not in the picture, but it should look something like this:
+        </p>
+
+        <!-- Image 2 -->
+        <img src="chawan.WEBP" alt="Tea Tools" class="tea-tools-img">
+        <!-- Description for Image 2 -->
+        <p class="tea-tools-description">
+            I would grab a scoop with the bamboo stick and put it inside the chawan. Sometimes I like to sift it to make the particles finer, but most of the time I skip this step. Before this step, I like to soften the bristles of the bamboo whisk by soaking it in hot water. But in reality, sometimes I just skip this step and pour a little bit of hot water over the matcha and whisk it. Once it is whisked with bubbles forming as a smooth foamy layer on top, you have the matcha base! You can add hot milk for a latte or add some ice, or just add more water for a more traditional taste. My all-time favorite is adding a little bit of grade A maple syrup for a little bit of sweetness and oat milk to finish my drink!
+        </p>
+
+        <!-- Image 3 -->
+        <img src="teatools2.jpg" alt="Tea Tools" class="tea-tools-img">
+        <!-- Description for Image 3 -->
+        <p class="tea-tools-description">
+            I would say these are the essentials. The green stand is to keep the bamboo whisk in shape after whisking and washing, so the next time you use it the bristles won't be ugly.
+        </p>
+    </div>
+    <script>
+        var images = document.querySelectorAll("img");
+
+        images.forEach(function(image) {
+        // Event listener for mouseenter
+        image.addEventListener("mouseenter", function() {
+            image.style.backgroundColor = "#a0b682";
+            image.style.padding = "5px";
+            image.style.margin = "5px";
+            image.style.boxShadow = "0px 0px 10px 5px #a0b682";
+            image.style.transform = "scale(1.05)";
+        });
+
+        // Event listener for mouseleave
+        image.addEventListener("mouseleave", function() {
+            image.style.backgroundColor = "";
+            image.style.padding = "";
+            image.style.margin = "";
+            image.style.boxShadow = "none";
+            image.style.transform = "scale(1)";
+        });
+        });
+    </script>
+    <script>
+        // Function to toggle responsive navigation
+        function toggleResponsiveNav() {
+            var nav = document.getElementById("mytopnav");
+            if (nav.className === "topnav") {
+                nav.className += " responsive";
+            } else {
+                nav.className = "topnav";
+            }
+        }
+    </script>
+</body>
+
+</html>
